@@ -2,8 +2,15 @@ import echonest.audio as audio
 from echonest.selection import fall_on_the
 import sys, random
 
+usage = """
+    Usage: python remix.py audio_file_name
+"""
 export_audio_dir = "audio/"
-audio_file = audio.LocalAudioFile(sys.argv[1])
+try:
+    audio_file = audio.LocalAudioFile(sys.argv[1])
+except:
+    print usage
+    sys.exit(1)
 
 beats = audio_file.analysis.beats
 
