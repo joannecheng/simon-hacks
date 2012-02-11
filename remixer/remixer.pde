@@ -28,7 +28,6 @@ void draw()
   for (int i=0; i<NUMBER_BUTTONS; i++){
     if(button_states[i] == 0){
       arduino.digitalWrite(ledPins[i], Arduino.HIGH);   // set the LED on
-      println("hello");
     }
     if(button_states[i] == 1){
       arduino.digitalWrite(ledPins[i],Arduino.LOW); 
